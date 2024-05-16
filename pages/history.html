@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Development history!</title>
+    <script>
+        function scrollToBottom(){
+            window.scrollTo(0,window.innerHeight);
+            console.log("this should fire");
+        }
+    </script>
+</head>
+<body>
+    <h1>A history of this game. Possibly extensive, maybe not.</h1>
+    Relevant commits are linked accordingly.<br>
+    This development history goes from oldest to newest.<br>
+    <button onclick="scrollToBottom()">Jump to bottom?</button>
+    <hr>
+    <section id="theBeginning">
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/b708a8e2ed0899f91011293ff569f0a04473ee96">b708a8e</a>] -
+            In the beginning, there was not much. Just me, a guy with a dream idea for a game, and a vague idea of how to pull it off. Just like I had with my UI project, I wanted to make things in Java, specifically in the LibGDX engine.
+        </p>
+
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/37f94cb2265abcd04b147b029019ae67ebda4efc">37f94cb</a>] -
+            So, I used the project generation tool of LibGDX and got right to work, attempting to create a Hyperlap2D scene (but failing miserably because I didn't know what the hell I was trying to do) and <a href="https://stackoverflow.com/a/21208050/22702897">copying in a reliable noise class for use in the world generator that I was going to make</a>.
+            The noise generator worked beautifully, so it stayed. The Hyperlap2D scene got removed 5 commits later.
+        </p>
+
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/abb6f4145c1863b8fe1c4a9d429b4988e5015d46">abb6f41</a>] -
+            This is where the player arrived, just a basic Player class, a texture, and a xcf file of my spritesheet at the time.
+        </p>
+
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/527b73a85edf71aebafd7fb1972eb9a97c62dc71">527b73a</a>] -
+            I got my main game class ready for future work, somewhat idioticly undoing the work I had already done in my Player class, expecting that i'd be making my Player into an actor on a stage (via Scene2d).
+            I then tried to (unsuccessfully) make a tilemap for my game via Tiled, expecting that I was going to need it. This commit also introduced the starting point of the actual WorldGenerator class.
+        </p>
+    </section>
+
+</body>
+</html>
