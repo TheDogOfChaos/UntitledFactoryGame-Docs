@@ -19,7 +19,7 @@
     <section id="theBeginning">
         <p>
             [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/b708a8e2ed0899f91011293ff569f0a04473ee96">b708a8e</a>] -
-            In the beginning, there was not much. Just me, a guy with a dream idea for a game, and a vague idea of how to pull it off. Just like I had with my UI project, I wanted to make things in Java, specifically in the LibGDX engine.
+            In the beginning, there was not much. Just me, a guy with a dream idea for a game, and a vague idea of how to pull it off. Just like I had with my <a href="https://github.com/TheDogOfChaos/libGDX-uiTest">UI project</a>, I wanted to make things in Java, specifically in the LibGDX engine.
         </p>
 
         <p>
@@ -30,15 +30,33 @@
 
         <p>
             [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/abb6f4145c1863b8fe1c4a9d429b4988e5015d46">abb6f41</a>] -
-            This is where the player arrived, just a basic Player class, a texture, and a xcf file of my spritesheet at the time.
+            This is where the player arrived, just a basic Player class with a blank method, a texture, and a xcf file (a project file for GIMP) of my spritesheet at the time.
         </p>
 
         <p>
             [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/527b73a85edf71aebafd7fb1972eb9a97c62dc71">527b73a</a>] -
-            I got my main game class ready for future work, somewhat idioticly undoing the work I had already done in my Player class, expecting that i'd be making my Player into an actor on a stage (via Scene2d).
-            I then tried to (unsuccessfully) make a tilemap for my game via Tiled, expecting that I was going to need it. This commit also introduced the starting point of the actual WorldGenerator class.
+            I got my main game class ready for future work, somewhat idiotically undoing the work I had already done in my Player class, expecting that I'd be making my Player into an actor on a stage (via Scene2D).
+            I then tried to (unsuccessfully) make a tilemap for my game via Tiled, expecting that I was going to need it. This commit also introduced the starting point of the actual WorldGenerator class, but at the time, it was literally just completely random numbers corresponding to a tile to draw onscreen.
+        </p>
+
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/64126a8aea1b63e561ef72b342baec1180f2fdc3">64126a8</a>] -
+            Here, as the commit describes, I sourced some assets and code from the tests directory of the LibGDX repository. This was mainly to figure out how I could try and achieve a dynamically generated tilemap. I also updated my spritesheet and added a sprite atlas file, and a spritemap file of which I cannot remember the purpose of.
+        </p>
+
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/26d97a4e38333014a83888bb44062fa1cee2fb36">26d97a4</a>] -
+            Here is where the Hyperlap2D and Tiled tilemap files said goodbye. I also moved the world generator to its own class, which is honestly a better way of doing things.
+        </p>
+
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/2c4346b64efe4c6785efd31fd99f7a65abdef4aa">2c4346b</a>] -
+            I added the files for MetalUI, a Scene2D.UI skin that I liked, and thought would work well. I also tried to properly set up the WorldGenerator class to, yknow.. actually generate a world, simultaneously setting up my main FMPGame class in the process such that it would load and render the map, and adding in a Scene2D.UI text button for easy regeneration of the world. It worked, but I foresaw some problems that could've arisen later down the line with the fact that it only generated the part of the floor that wasn't under walls, so i decided to try and rewrite it after this so it generated an ENTIRE floor, even underneath walls.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/3deede1fa9112f56913f10485f923768e9749991">3deede1</a>] -
+            I replaced the default tile atlas with my own, which.. also worked. I also moved the restart button to a keybind (the Space key, to be precise) and created a LoadNewMap method in the world generator, which (much like you'd expect) loaded a new world.
         </p>
     </section>
-
 </body>
 </html>
