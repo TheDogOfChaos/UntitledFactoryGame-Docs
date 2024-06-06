@@ -6,12 +6,12 @@
     <script>
         function scrollToBottom(){
             window.scrollTo(0,window.innerHeight);
-            console.log("this should fire");
+            console.log("This should fire.");
         }
     </script>
 </head>
 <body>
-    <h1>A history of this game. Possibly extensive, maybe not.</h1>
+    <h1>A history of notable commits I made while making this game. Possibly extensive, maybe not.</h1>
     Relevant commits are linked accordingly.<br>
     This development history goes from oldest to newest.<br>
     <button onclick="scrollToBottom()">Jump to bottom?</button>
@@ -36,12 +36,14 @@
         <p>
             [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/527b73a85edf71aebafd7fb1972eb9a97c62dc71">527b73a</a>] -
             I got my main game class ready for future work, somewhat idiotically undoing the work I had already done in my Player class, expecting that I'd be making my Player into an actor on a stage (via Scene2D).
-            I then tried to (unsuccessfully) make a tilemap for my game via Tiled, expecting that I was going to need it. This commit also introduced the starting point of the actual WorldGenerator class, but at the time, it was literally just completely random numbers corresponding to a tile to draw onscreen.
+            I then tried to (unsuccessfully) make a tilemap for my game via Tiled, expecting that I was going to need it.
+            This commit also introduced the starting point of the actual WorldGenerator class, but at the time, it was literally just completely random numbers corresponding to a tile to draw onscreen.
         </p>
 
         <p>
             [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/64126a8aea1b63e561ef72b342baec1180f2fdc3">64126a8</a>] -
-            Here, as the commit describes, I sourced some assets and code from the tests directory of the LibGDX repository. This was mainly to figure out how I could try and achieve a dynamically generated tilemap. I also updated my spritesheet and added a sprite atlas file, and a spritemap file of which I cannot remember the purpose of.
+            Here, as the commit describes, I sourced some assets and code from the tests directory of the LibGDX repository. This was mainly to figure out how I could try and achieve a dynamically generated tilemap.
+            I also updated my spritesheet and added a sprite atlas file, and a spritemap file of which I cannot remember the purpose of.
         </p>
 
         <p>
@@ -51,12 +53,40 @@
 
         <p>
             [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/2c4346b64efe4c6785efd31fd99f7a65abdef4aa">2c4346b</a>] -
-            I added the files for MetalUI, a Scene2D.UI skin that I liked, and thought would work well. I also tried to properly set up the WorldGenerator class to, yknow.. actually generate a world, simultaneously setting up my main FMPGame class in the process such that it would load and render the map, and adding in a Scene2D.UI text button for easy regeneration of the world. It worked, but I foresaw some problems that could've arisen later down the line with the fact that it only generated the part of the floor that wasn't under walls, so i decided to try and rewrite it after this so it generated an ENTIRE floor, even underneath walls.
+            I added the files for MetalUI, a Scene2D.UI skin that I liked, and thought would work well. I also tried to properly set up the WorldGenerator class to, yknow.. <i>actually</i> generate a world, simultaneously setting up my main FMPGame class in the process such that it would load and render the map, and adding in a Scene2D.UI text button for easy regeneration of the world.
+            The class worked, but the button didn't, and I foresaw some problems that could've arisen later down the line with the fact that it only generated the part of the floor that wasn't under walls, so i decided to try and rewrite it after this so it generated an ENTIRE floor, even underneath walls.
         </p>
         <p>
             [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/3deede1fa9112f56913f10485f923768e9749991">3deede1</a>] -
-            I replaced the default tile atlas with my own, which.. also worked. I also moved the restart button to a keybind (the Space key, to be precise) and created a LoadNewMap method in the world generator, which (much like you'd expect) loaded a new world.
+            I replaced the default tile atlas with my own, which.. also worked.
+            I also moved the restart button to a keybind (the Space key, to be precise) and created a LoadNewMap method in the world generator, which (much like you'd expect) loaded a new world.
         </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/ca711c61967dbd0cdfb882f110b66f513defbd64">ca711c6</a>] -
+            Here I unsuccessfully attempted to make my WorldGenerator generate the floor.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/51e184d433fe1b649c8b0c1c0a5d5d58b6548868">51e184d</a>] -
+            Here's where I did a MASSIVE rewrite of the entire WorldGenerator, now making it use a tile atlas to set the different areas of a 3-dimensional array to images that will then be drawn (but in a later commit)
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/370b83e7292d8e9f861fd0a9f613f479797d451b">370b83e</a>] -
+            here i got the assets that i was working on in earlier commits into a square atlas for easier access later down the line.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/df7342d6464e619d902e83fa6c6221904edb10d8">df7342d</a>] -
+            Massive commit, and a massive success. I made it so that the renderer draws every layer of the map over the last, and implemented a selector for the different noise types (in case I ever wanted to 
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/499380ace6f083e512d72ebd67513a181e52424d">499380a</a>] -
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/499380ace6f083e512d72ebd67513a181e52424d">499380a</a>] -
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/499380ace6f083e512d72ebd67513a181e52424d">499380a</a>] -
+        </p>
+
     </section>
 </body>
 </html>
