@@ -9,84 +9,179 @@
             console.log("This should fire.");
         }
     </script>
+    <style>
+        .big {
+            font-size: larger;
+        }
+    </style>
+    <!-- NOTE: I should probably make a program to automate the addition of the <p> tags with the relevant commits pre-filled, cause this gets quite tedious to do manually.-->
 </head>
 <body>
     <h1>A history of notable commits I made while making this game. Possibly extensive, maybe not.</h1>
     Relevant commits are linked accordingly.<br>
     This development history goes from oldest to newest.<br>
+    All links open in new tabs.<br>
     <button onclick="scrollToBottom()">Jump to bottom?</button>
     <hr>
     <section id="theBeginning">
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/b708a8e2ed0899f91011293ff569f0a04473ee96">b708a8e</a>] -
-            In the beginning, there was not much. Just me, a guy with a dream idea for a game, and a vague idea of how to pull it off. Just like I had with my <a href="https://github.com/TheDogOfChaos/libGDX-uiTest">UI project</a>, I wanted to make things in Java, specifically in the LibGDX engine.
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/b708a8e2ed0899f91011293ff569f0a04473ee96" target="_blank">b708a8e</a>] -
+            In the beginning, there was not much. Just me, a guy with a dream idea for a game, and a vague idea of how to pull it off. Just like I had with my <a href="https://github.com/TheDogOfChaos/libGDX-uiTest" target="_blank">UI project</a>, I wanted to make things in Java, specifically in the LibGDX engine.
         </p>
-
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/37f94cb2265abcd04b147b029019ae67ebda4efc">37f94cb</a>] -
-            So, I used the project generation tool of LibGDX and got right to work, attempting to create a Hyperlap2D scene (but failing miserably because I didn't know what the hell I was trying to do) and <a href="https://stackoverflow.com/a/21208050/22702897">copying in a reliable noise class for use in the world generator that I was going to make</a>.
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/37f94cb2265abcd04b147b029019ae67ebda4efc" target="_blank">37f94cb</a>] -
+            So, I used the project generation tool of LibGDX and got right to work, attempting to create a Hyperlap2D scene (but failing miserably because I didn't know what the hell I was trying to do) and <a href="https://stackoverflow.com/a/21208050/22702897" target="_blank">copying in a reliable noise class for use in the world generator that I was going to make</a>.
             The noise generator worked beautifully, so it stayed. The Hyperlap2D scene got removed 5 commits later.
         </p>
-
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/abb6f4145c1863b8fe1c4a9d429b4988e5015d46">abb6f41</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/abb6f4145c1863b8fe1c4a9d429b4988e5015d46" target="_blank">abb6f41</a>] -
             This is where the player arrived, just a basic Player class with a blank method, a texture, and a xcf file (a project file for GIMP) of my spritesheet at the time.
         </p>
-
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/527b73a85edf71aebafd7fb1972eb9a97c62dc71">527b73a</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/527b73a85edf71aebafd7fb1972eb9a97c62dc71" target="_blank">527b73a</a>] -
             I got my main game class ready for future work, somewhat idiotically undoing the work I had already done in my Player class, expecting that I'd be making my Player into an actor on a stage (via Scene2D).
             I then tried to (unsuccessfully) make a tilemap for my game via Tiled, expecting that I was going to need it.
             This commit also introduced the starting point of the actual WorldGenerator class, but at the time, it was literally just completely random numbers corresponding to a tile to draw onscreen.
         </p>
-
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/64126a8aea1b63e561ef72b342baec1180f2fdc3">64126a8</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/64126a8aea1b63e561ef72b342baec1180f2fdc3" target="_blank">64126a8</a>] -
             Here, as the commit describes, I sourced some assets and code from the tests directory of the LibGDX repository. This was mainly to figure out how I could try and achieve a dynamically generated tilemap.
             I also updated my spritesheet and added a sprite atlas file, and a spritemap file of which I cannot remember the purpose of.
         </p>
-
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/26d97a4e38333014a83888bb44062fa1cee2fb36">26d97a4</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/26d97a4e38333014a83888bb44062fa1cee2fb36" target="_blank">26d97a4</a>] -
             Here is where the Hyperlap2D and Tiled tilemap files said goodbye. I also moved the world generator to its own class, which is honestly a better way of doing things.
         </p>
-
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/2c4346b64efe4c6785efd31fd99f7a65abdef4aa">2c4346b</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/2c4346b64efe4c6785efd31fd99f7a65abdef4aa" target="_blank">2c4346b</a>] -
             I added the files for MetalUI, a Scene2D.UI skin that I liked, and thought would work well. I also tried to properly set up the WorldGenerator class to, yknow.. <i>actually</i> generate a world, simultaneously setting up my main FMPGame class in the process such that it would load and render the map, and adding in a Scene2D.UI text button for easy regeneration of the world.
             The class worked, but the button didn't, and I foresaw some problems that could've arisen later down the line with the fact that it only generated the part of the floor that wasn't under walls, so i decided to try and rewrite it after this so it generated an ENTIRE floor, even underneath walls.
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/3deede1fa9112f56913f10485f923768e9749991">3deede1</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/3deede1fa9112f56913f10485f923768e9749991" target="_blank">3deede1</a>] -
             I replaced the default tile atlas with my own, which.. also worked.
             I also moved the restart button to a keybind (the Space key, to be precise) and created a LoadNewMap method in the world generator, which (much like you'd expect) loaded a new world.
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/ca711c61967dbd0cdfb882f110b66f513defbd64">ca711c6</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/ca711c61967dbd0cdfb882f110b66f513defbd64" target="_blank">ca711c6</a>] -
             Here I unsuccessfully attempted to make my WorldGenerator generate the floor.
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/51e184d433fe1b649c8b0c1c0a5d5d58b6548868">51e184d</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/51e184d433fe1b649c8b0c1c0a5d5d58b6548868" target="_blank">51e184d</a>] -
             Here's where I did a MASSIVE rewrite of the entire WorldGenerator, now making it use a tile atlas to set the different areas of a 3-dimensional array to images that will then be drawn (but in a later commit)
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/370b83e7292d8e9f861fd0a9f613f479797d451b">370b83e</a>] -
-            here i got the assets that i was working on in earlier commits into a square atlas for easier access later down the line.
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/370b83e7292d8e9f861fd0a9f613f479797d451b" target="_blank">370b83e</a>] -
+            Here I got the assets that i was working on in earlier commits into a square atlas for easier access later down the line.
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/df7342d6464e619d902e83fa6c6221904edb10d8">df7342d</a>] -
-            Massive commit, and a massive success. I made it so that the renderer draws every layer of the map over the last, and implemented a selector for the different noise types (in case I ever wanted to 
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/df7342d6464e619d902e83fa6c6221904edb10d8" target="_blank">df7342d</a>] -
+            Massive commit, and a massive success. I made it so that the renderer draws every layer of the map over the last, and implemented a selector for the different noise types (in case I ever wanted to <span class="big">[PLEASE FINISH THIS]</span>
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/499380ace6f083e512d72ebd67513a181e52424d">499380a</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/7d6ac582011e1efea6f6618958dccd2ce49215ea" target="_blank">7d6ac58</a>] -
+            Added a main menu (with no functionality).
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/499380ace6f083e512d72ebd67513a181e52424d">499380a</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/9fa82b6a1c2f987ec1496e103c9b44a879ac4d52" target="_blank">9fa82b6</a>] -
+            Made the main menu start button functional.
         </p>
         <p>
-            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/499380ace6f083e512d72ebd67513a181e52424d">499380a</a>] -
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/6dde3efbe150ef25f23916ddfbda4a9d03894de6" target="_blank">6dde3ef</a>] -
+            Complete rebrand from FMPGame to UntitledFactoryGame.
         </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/6a3141b1d4e6b16d0ce7566ae4c5790f23e1ec60" target="_blank">6a3141b</a>] -
+            Eliminated some if-else chains intelligent, and added some more functionality to the main menu.
+            Game can now be actually exited.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/607781876b7c3e4ff5922581772de6bf42c62707" target="_blank">6077818</a>] -
+            Added a basic player with basic movement but NO collision detection.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/8891e0b903723962c35b501d9448470261cb9b86" target="_blank">8891e0b</a>] -
+            Actually registered the InputHandler because I forgot to in the previous commit.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/8fea8bae8a6526476b35de473335a8566db24c28" target="_blank">8fea8ba</a>] -
+            Tried to implement a Vector-based movement system instead of just incrementing the player's pixel position.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/a3cf4007b771cfd0992f316046a04b7ff92b0c6c" target="_blank">a3cf400</a>] -
+            Reverted some bad decisions and implemented the Player's movement speed as a variable, for easy changing by in-world events & other things to that effect.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/68fa8b408fd293e37a8f649c1d4e97d905a98340" target="_blank">68fa8b4</a>] -
+            Massive changes, and the beginning of me using multi-level inheritance to my advantage.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/ca081229818de896c62e822b1c545817f28db563" target="_blank">ca08122</a>] -
+            An attempt at Box2D, where I set up the world, player, InputHandler, and attempted to make wall colliders for the walls of the map. (<a href="https://libgdx.com/wiki/extensions/physics/box2d" target="_blank">Box2D is very popular physics library, originally built for C++ but implemented in LibGDX as an extension via a thin Java wrapper</a>)
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/e304c9bfe14aedc1a4f2d69fcee3ebb5fd6ac4c4" target="_blank">e304c9b</a>] -
+            Added debug information akin to Minecraft's F3 Screen.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/822d74f094e81de26c1671c75c423e2ad296db91" target="_blank">822d74f</a>] -
+            Implemented wall collisions. They didn't seem to align properly at the time, but that was due to an oversight that I found later.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/6fc0fcd5742b4ceb808d700d77cfec0e43e11c1a" target="_blank">6fc0fcd</a>] -
+            Attempted to add a physics body loader and define my own shapes for use in my game because I thought the player collider had rounded corners (it didn't, but again, I found that out later.)
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/ac66c94097dcc6d6fc8522b46fdac49ef6398d72" target="_blank">ac66c94</a>] -
+            Here I attempted to implement a lighting system, because that was what appealed to my ADHD brain at that point in time. I shelved it soon afterwards.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/7f0ffbf3e614598c1eb428a7bf8beb3dbf944155" target="_blank">7f0ffbf</a>] -
+            Here was where I shelved the lighting system, but also where I got the camera following the player properly.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/a6adad6fe0c4c5a6f9eaeb161e68b7095d143642" target="_blank">a6adad6</a>] -
+            Began to make art for the player buildings.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/f8104a8c98cdc5349dc8fe9f36e1ebeb6ef5d657" target="_blank">f8104a8</a>] -
+            More player building art, and preparations for the building system, alongside some de-boilerplating.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/0db0fca53f0d7f7699f7a9442c4e20f9b71ce87e" target="_blank">0db0fca</a>] -
+            Made Preparations for the build menu.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/996c15a17a4aaf001925ea3101d1ee753b234060" target="_blank">996c15a</a>] -
+            Semi-Proper implementation of the build menu (it renders, but functionality is not implemented yet). Again, my ADHD brain took the wheel (probably because this was getting a bit stagnant for me), and I decided to try my hand at making music, for some reason.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/a7c6ee857b22e0723308da582d1af29981170350" target="_blank">a7c6ee8</a>] -
+            More work on the building menu. It works, and can dynamically add buttons based on an array of 'Blocks' objects
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/087c5e44865159879997bff26e0deaf21440fc38" target="_blank">087c5e4</a>] -
+            Initial work on the building system.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/9cc40d67f06d25b3257daf134cb47488e3dea981" target="_blank">9cc40d6</a>] -
+            The ADHD Strikes Back: Tried to implement a Named Binary Tag system for easier data storage about blocks, even though I did not have the time to do so.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/e0c62bb12f28aa41e944bf0288ae56581702114d" target="_blank">e0c62bb</a>,<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/7da54a8aac2c2941117068ce510062e13526880a" target="_blank">7da54a8</a>,<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/af95288d6adebf0808a71deafe2f20c2ab50c382" target="_blank">af95288</a>] -
+            Licensing stuff.
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/9615f8d42f2f143116e4efc62bf8de7ec97eaf2c" target="_blank">9615f8d</a>] -
+            A lot of head-scratching and trial & error regarding how I'd actually implement the building system
 
+        </p>
+        <p>
+            [<a href="https://github.com/TheDogOfChaos/UntitledFactoryGame/commit/79aaa1e8f9bf09bb60cbdb142133b72818bf6c7f" target="_blank">79aaa1e</a>] -
+            Making the world gen use the Build class introduced in the previous commit.
+
+        </p>
+        <h2>Here marks how far i got with this.</h2>
     </section>
 </body>
 </html>
